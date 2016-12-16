@@ -37,7 +37,7 @@
     }
     
     
-//    自己写的网络请求方法
+//    自己写的网络请求方法 缓存
     [NetworkTool getWithUrl:@"http://carprice.58.com/comm/brand.json" andParams:nil success:^(id json) {
         NSLog(@"%@",json);
     } failure:^(NSError *error) {
@@ -47,7 +47,7 @@
     
     
     
-    
+    //afn不受这个缓存方法缓存
 //    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
 //
 //    [manager GET:@"http://carprice.58.com/comm/brand.json" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
