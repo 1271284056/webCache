@@ -1,0 +1,11 @@
+
+platform :ios, '8.0'
+inhibit_all_warnings!
+target ‘432’ do
+
+  use_frameworks!
+
+pod ‘YYCache’
+
+end
+
