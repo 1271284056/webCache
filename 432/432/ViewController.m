@@ -23,9 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [AllCacheTool start];
-    //http://www.baidu.com 不做缓存
+
     NSArray *arr = @[@"http://www.baidu.com", @"http://www.tianya.cn", @"http://www.youku.com", @"http://v.baidu.com"];
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < arr.count; i++) {
         NSString *str = arr[i];
         
         UIButton* button =[UIButton buttonWithType:UIButtonTypeCustom];

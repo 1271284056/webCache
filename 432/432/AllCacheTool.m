@@ -99,7 +99,7 @@ static NSString * kHostFlag = @"www.baidu.com";
 - (void)startLoading
 {
     self.cache = [[YYCache alloc] initWithName:@"YYCacheDB"];
-    //        [self.cache removeAllObjects];
+    [self.cache removeAllObjects];
     
     //将URL转换成名字
     cacheKey = [NSString stringWithFormat:@"%lx", [[[self.request URL] absoluteString] hash]];
@@ -224,10 +224,7 @@ static NSString * kHostFlag = @"www.baidu.com";
     BOOL isReachable = flags & kSCNetworkFlagsReachable;
     BOOL needsConnection = flags & kSCNetworkFlagsConnectionRequired;
     BOOL isNetworkEnable  =(isReachable && !needsConnection) ? YES : NO;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        
-        [UIApplication sharedApplication].networkActivityIndicatorVisible =isNetworkEnable;/*  网络指示器的状态： 有网络 ： 开  没有网络： 关  */
-    });
+
     return isNetworkEnable;
 }
 
