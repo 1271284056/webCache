@@ -23,7 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [AllCacheTool start];
-    NSArray *arr = @[@"http://www.baidu.com", @"http://www.163.com", @"http://www.tianya.cn", @"http://www.youku.com", @"http://v.baidu.com"];
+    //http://www.baidu.com 不做缓存
+    NSArray *arr = @[@"http://www.baidu.com", @"http://www.tianya.cn", @"http://www.youku.com", @"http://v.baidu.com"];
     for (int i = 0; i < 5; i++) {
         NSString *str = arr[i];
         
